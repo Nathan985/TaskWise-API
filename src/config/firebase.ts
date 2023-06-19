@@ -1,6 +1,4 @@
-import { initializeApp } from 'firebase/app';
-
-const firebaseConfig = {
+export const FirebaseConfig = {
   apiKey: 'AIzaSyA2DrvXq8Xvuh1Cvz5YsV1P9bLUdagXoaA',
   authDomain: 'zeta-matrix-357017.firebaseapp.com',
   projectId: 'zeta-matrix-357017',
@@ -9,5 +7,3 @@ const firebaseConfig = {
   appId: '1:383060531729:web:ab2ed8385cd5b7880c6fb0',
   measurementId: 'G-J320FF0PT8',
 };
-
-export const app = initializeApp(firebaseConfig);

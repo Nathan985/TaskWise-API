@@ -13,7 +13,7 @@ export class UserService {
   ) {}
 
   async create(createUserDto: CreateUserDto) {
-    const isEmailExists = await this._userRepository.findBy({
+    const isEmailExists = await this._userRepository.findOneBy({
       email: createUserDto.email,
     });
 
@@ -33,7 +33,7 @@ export class UserService {
   }
 
   async update(id: number, updateUserDto: UpdateUserDto) {
-    const isEmailExists = await this._userRepository.findBy({
+    const isEmailExists = await this._userRepository.findOneBy({
       email: updateUserDto.email,
     });
 

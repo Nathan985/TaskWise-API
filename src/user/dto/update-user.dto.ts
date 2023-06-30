@@ -1,6 +1,6 @@
-import { OmitType, PartialType } from '@nestjs/mapped-types';
-import { CreateUserDto } from './create-user.dto';
+import { OmitType, PartialType } from '@nestjs/swagger';
+import { UserEntity } from 'src/entities/User.entity';
 
 export class UpdateUserDto extends PartialType(
-  OmitType(CreateUserDto, ['uid', 'id'] as const),
+  OmitType(UserEntity, ['uid', 'id'] as const),
 ) {}
